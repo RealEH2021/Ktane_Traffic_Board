@@ -1,0 +1,862 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Module Name — Keep Talking and Nobody Explodes Module</title>
+    <meta name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <script src="js/ktane-utils.js"></script>
+</head>
+<body>
+    <div class="section">
+        <div class="page page-bg-01">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <img src="img/Component/Traffic Board.svg" class="diagram">
+                <h2>On the Subject of Traffic Board</h2>
+                <p class="flavour-text">Please always obey the traffic rules!</p>
+			
+				<ul>
+                    <li>In this module, you'll see 6 buttons arranged in 3 rows and 2 columns. Their names are shown in the graph.</li>
+                    <li>Button R1 and C1 will show 2 traffic signs. They cannot be pressed.</li>
+					<li>Button D1 will show another traffic sign. It cannot be pressed either.</li>
+					<li>Button R2 and C2 is used to insert your answer. Pressing them will change their signs with no consequence.</li>
+					<li>Button D2 is the submit button. Only press it when you think you have reached the correct answer!</li>
+                </ul>
+				
+				To determine the correct signs, follow the procedure below:
+				<ol>
+					<li>Choose the only correct <em>Road Table</em>. 
+					The road condition can be very different according to <strong>what day it is today</strong>, 
+					so remember to examine your calendar!</li>
+					<li>Read button R1 and C1 to get your starting grid (R1 for row and C1 for column).</li>
+					<li>Move one step in the direction of the arrow in your grid (the 8 grids around you can be reached within 1 step).
+					<strong>When you go beyond the boundaries of the Road Table, you swap to the opposite side.</strong></li>
+					<li>Examine whether you have to stop. You must stop whenever any of the following condition is true, 
+					or return to step 3 when they are all false:</li>
+						<ul>
+						<li>You have come to the grid whose arrow's direction corresponds to the traffic sign on button D1 in <em>Reference Table</em>.</li>
+						<li>You have returned to your starting grid.</li>
+						<li>You have visited a grid for 2 times.</li>
+						</ul>
+					<li>Input the position where you stop via button R2 and C2 (R2 for row and C2 for column).
+					After that, you can submit your answer by pressing button D2.</li>
+				</ol>
+                
+            </div>
+            <div class="page-footer relative-footer">Page 1 of 8</div>
+        </div>
+        <div class="page page-bg-02">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h3>Reference Table</h3>
+				<table>
+					<tr>
+						<th>Sign</th>
+						<th><img src="img/Signs_Caution/accident.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/animal.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/children.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/construction.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/danger.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/signal.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/uneven.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Caution/walker.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th>Direction</th>
+						<th><img src="img/Arrows/u.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/ru.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/r.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/rd.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/d.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/ld.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/l.png" width = "50" height = "50"></th>
+						<th><img src="img/Arrows/lu.png" width = "50" height = "50"></th>
+					</tr>
+				</table>
+				
+				<h3>Road Table</h3>
+				<h4>Monday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 2 of 8</div>
+        </div>
+        <div class="page page-bg-03">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h4>Tuesday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 3 of 8</div>
+        </div>
+		<div class="page page-bg-04">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h4>Wednesday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 4 of 8</div>
+        </div>
+    <div class="page page-bg-05">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h4>Thursday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 5 of 8</div>
+        </div>
+		<div class="page page-bg-06">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h4>Friday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 6 of 8</div>
+        </div>
+		<div class="page page-bg-07">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h4>Saturday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 7 of 8</div>
+        </div>
+		<div class="page page-bg-08">
+            <div class="page-header">
+                <span class="page-header-doc-title">Keep Talking and Nobody Explodes Mod</span>
+                <span class="page-header-section-title">Traffic Board</span>
+            </div>
+            <div class="page-content">
+                <h4>Sunday</h4>
+				<table>
+					<tr>
+						<th></th>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/forward_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/left_right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/rd.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/l.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/lside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/u.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ru.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/right.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/r.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+					</tr>
+					<tr>
+						<th><img src="img/Signs_Direction/rside.png" width = "50" height = "50"></th>
+						<td><img src="img/Arrows/lu.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/d.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+						<td><img src="img/Arrows/ld.png" width = "50" height = "50"></td>
+					</tr>
+				</table>
+            </div>
+            <div class="page-footer relative-footer">Page 8 of 8</div>
+        </div>
+    
+    </div>
+</body>
+</html>
