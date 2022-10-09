@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using System.Linq;
 using KModkit;
@@ -302,5 +303,43 @@ public class trafficBoardScript : MonoBehaviour {
                 }
             }
         }
+    }
+    
+    #pragma warning disable 414
+    private readonly string TwitchHelpMessage = "Use '!{0} <sign1> <sign2>' to submit signs (sign1 - top, sign2 - bottom). Possible signs: f - forward, fl - forward/left, fr - forward/right, l - left, lr - left/right, ls - left side (bottom-left arrow), r - right, rs - right side (bottom-right arrow)";
+    #pragma warning restore 414
+    
+    private static readonly string[] sign_commands = new[]
+    {
+        "f",
+        "fl",
+        "fr",
+        "l",
+        "lr",
+        "ls",
+        "r",
+        "rs"
+    };
+    
+    IEnumerator ProcessTwitchCommand(string command)
+    {
+        var signRE = string.Join("|", sign_commands);
+        var match = Regex.Match(command.Trim(), string.Format("^({0}) ({0})$", signRE), RegexOptions.IgnoreCase);
+        if(match.Success)
+        {
+            yield return null;
+            buttons[0].OnInteract();
+            selrow = Array.IndexOf(sign_commands, match.Groups[1].Value.ToLowerInvariant());
+            yield return new WaitForSeconds(.1f);
+            buttons[1].OnInteract();
+            selcolumn = Array.IndexOf(sign_commands, match.Groups[2].Value.ToLowerInvariant());
+            yield return new WaitForSeconds(.1f);
+            buttons[2].OnInteract();
+        }
+    }
+    
+    void TwitchHandleForcedSolve()
+    {
+        StartCoroutine(ProcessTwitchCommand(string.Format("{0} {1}", sign_commands[ansrow], sign_commands[anscolumn])));
     }
 }
